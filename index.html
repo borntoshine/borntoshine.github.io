@@ -5,10 +5,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script>
+		  window.fbAsyncInit = function() {
+			FB.init({
+			  appId      : '597278157098643',
+			  xfbml      : true,
+			  version    : 'v2.6'
+			});
+		  };
+
+		  (function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
     </head>
     <body style="max-width: 800px;">        
         <div id="messgesDiv">
             <center><h3>Message</h3></center>
+			<div
+			  class="fb-like"
+			  data-share="true"
+			  data-width="450"
+			  data-show-faces="true">
+			</div>
         </div>
         <div style="margin-top: 20px;">
             <input type="text" id="nameInput" placeholder="Name">
